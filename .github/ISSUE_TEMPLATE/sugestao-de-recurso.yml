@@ -1,0 +1,60 @@
+name: "\U0001F4DA Sugestão de recurso"
+description: Sugira um curso, canal, livro, ferramenta ou site para o guia
+title: "[Sugestão]: "
+labels: ["sugestão", "conteúdo"]
+body:
+  - type: input
+    id: nome
+    attributes:
+      label: Nome do recurso
+      description: Nome do curso, canal, livro, ferramenta ou site
+      placeholder: "Ex.: NestJS Fundamentals (curso oficial)"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Link direto e funcionando para o recurso (HTTP 200)
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      description: Em qual seção do guia esse recurso deve entrar?
+      options:
+        - Roadmap
+        - Por onde começar
+        - Documentação oficial
+        - Sites e cursos para aprender NestJS
+        - Livros
+        - Canais no Youtube
+        - Podcasts
+        - Sites, blogs e newsletters
+        - Ferramentas
+        - Projetos práticos e desafios
+        - IA na prática
+        - Carreira e vagas
+        - Comunidades
+        - Certificações
+        - Outra (explique no campo abaixo)
+    validations:
+      required: true
+  - type: textarea
+    id: motivo
+    attributes:
+      label: Por que incluir?
+      description: Uma ou duas frases explicando o valor do recurso para quem está aprendendo NestJS
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmações
+      options:
+        - label: O link está funcionando (não retorna 404 ou erro)
+          required: true
+        - label: O conteúdo é legal (sem pirataria ou redistribuição não autorizada)
+          required: true

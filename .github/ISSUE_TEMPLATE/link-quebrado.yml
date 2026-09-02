@@ -1,0 +1,28 @@
+name: "\U0001F517 Link quebrado"
+description: Reporte um link quebrado ou desatualizado no guia
+title: "[Link quebrado]: "
+labels: ["bug", "link quebrado"]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Link com problema
+      description: Cole o link exato que está quebrado
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: secao
+    attributes:
+      label: Seção do guia
+      description: Em qual seção do README.md esse link aparece?
+      placeholder: "Ex.: Ferramentas"
+    validations:
+      required: true
+  - type: textarea
+    id: substituto
+    attributes:
+      label: Sugestão de substituto
+      description: Se você conhece um link equivalente que funciona, cole aqui (opcional)
+    validations:
+      required: false
